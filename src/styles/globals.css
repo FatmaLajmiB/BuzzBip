@@ -1,0 +1,470 @@
+/* src/styles/globals.css */
+
+/* ------------------------------------------------------------- */
+/* 1. Import Tailwind Core */
+/* ------------------------------------------------------------- */
+/* This one line imports all of Tailwind's base, components, and utilities */
+@import 'tailwindcss';
+
+/* ------------------------------------------------------------- */
+/* 2. Custom CSS Variables (from your themes/*.ts files) */
+/* ------------------------------------------------------------- */
+/* All your design tokens are now defined as CSS variables in the :root selector. */
+:root {
+  /* Fonts */
+  --font-primary: "Parkinsans", sans-serif;
+  --font-secondary: "Georgia", serif;
+
+  /* Colors */
+  --color-primary-50: #F2EEFE;
+--color-primary-100: #D7C9FB;
+--color-primary-200: #C4AFF9;
+--color-primary-300: #A98AF6;
+--color-primary-400: #9974F5;
+--color-primary-500: #7F51F2;
+--color-primary-600: #744ADC;
+--color-primary-700: #5A3AAC;
+--color-primary-800: #462D85;
+--color-primary-900: #352266;
+
+--color-secondary-50: #E6FFF7;
+--color-secondary-100: #B0FEE6;
+--color-secondary-200: #8AFDDA;
+--color-secondary-300: #54FCC9;
+--color-secondary-400: #33FCBE;
+--color-secondary-500: #00FBAE;
+--color-secondary-600: #00E49E;
+--color-secondary-700: #00B27C;
+--color-secondary-800: #008A60;
+--color-secondary-900: #006949;
+
+--color-success-50: #ECFAEF;
+--color-success-100: #C4EFCD;
+--color-success-200: #A8E7B4;
+--color-success-300: #80DC92;
+--color-success-400: #67D57D;
+--color-success-500: #41CB5D;
+--color-success-600: #3BB955;
+--color-success-700: #2E9042;
+--color-success-800: #247033;
+--color-success-900: #1B5527;
+
+--color-warning-50: #FFFAEC;
+--color-warning-100: #FFEFC4;
+--color-warning-200: #FFE7A7;
+--color-warning-300: #FFDC7F;
+--color-warning-400: #FFD566;
+--color-warning-500: #FFCB40;
+--color-warning-600: #E8B93A;
+--color-warning-700: #B5902D;
+--color-warning-800: #8C7023;
+--color-warning-900: #6B551B;
+
+--color-error-50: #FEEBEB;
+--color-error-100: #FCC2C2;
+--color-error-200: #FAA5A5;
+--color-error-300: #F87C7C;
+--color-error-400: #F66262;
+--color-error-500: #F43B3B;
+--color-error-600: #DE3636;
+--color-error-700: #AD2A2A;
+--color-error-800: #862020;
+--color-error-900: #661919;
+
+--color-neutral-gray-50: #F3F4F4;
+--color-neutral-gray-100: #DBDBDD;
+--color-neutral-gray-200: #CACACC;
+--color-neutral-gray-300: #B1B2B5;
+--color-neutral-gray-400: #A2A3A7;
+--color-neutral-gray-500: #8B8C91;
+--color-neutral-gray-600: #7E7F84;
+--color-neutral-gray-700: #636367;
+--color-neutral-gray-800: #4C4D50;
+--color-neutral-gray-900: #3A3B3D;
+
+--color-neutral-purple-50: #F5F6F8;
+--color-neutral-purple-100: #E1E2E8;
+--color-neutral-purple-200: #D3D4DD;
+--color-neutral-purple-300: #BFC0CD;
+--color-neutral-purple-400: #B2B4C4;
+--color-neutral-purple-500: #9FA1B5;
+--color-neutral-purple-600: #9193A5;
+--color-neutral-purple-700: #717281;
+--color-neutral-purple-800: #575964;
+--color-neutral-purple-900: #43444C;
+
+--color-base-white: #FFFFFF;
+--color-base-white50: rgba(255, 255, 255, 0.5);
+--color-base-black: #0F0F0F;
+--color-base-black50: rgba(15, 15, 15, 0.5);
+
+--color-info-50: #EBF5FE;
+--color-info-100: #C2E1FD;
+--color-info-200: #A5D3FC;
+--color-info-300: #7CB9FB;
+--color-info-400: #62B2FA;
+--color-info-500: #3B9FF9;
+--color-info-600: #3691E3;
+--color-info-700: #2A71B1;
+--color-info-800: #205789;
+--color-info-900: #194369;
+
+--color-accent-blue-50: #E8EBFB;
+--color-accent-blue-100: #B6BFF2;
+--color-accent-blue-200: #93A1EC;
+--color-accent-blue-300: #6276E4;
+--color-accent-blue-400: #445BDE;
+--color-accent-blue-500: #1532D6;
+--color-accent-blue-600: #132EC3;
+--color-accent-blue-700: #0F2498;
+--color-accent-blue-800: #0C1C76;
+--color-accent-blue-900: #09155A;
+
+--color-accent-mint-50: #E9FCF8;
+--color-accent-mint-100: #BBF7E8;
+--color-accent-mint-200: #9AF3DD;
+--color-accent-mint-300: #6CEDCD;
+--color-accent-mint-400: #50E9C4;
+--color-accent-mint-500: #24E4B5;
+--color-accent-mint-600: #21CFA5;
+--color-accent-mint-700: #1AA281;
+--color-accent-mint-800: #147D64;
+--color-accent-mint-900: #0F604C;
+
+--color-accent-magenta-50: #FCE9F4;
+--color-accent-magenta-100: #F6BBDC;
+--color-accent-magenta-200: #F29ACB;
+--color-accent-magenta-300: #EC6CB4;
+--color-accent-magenta-400: #E950A5;
+--color-accent-magenta-500: #E3248F;
+--color-accent-magenta-600: #CF2182;
+--color-accent-magenta-700: #A11A66;
+--color-accent-magenta-800: #7D144F;
+--color-accent-magenta-900: #5F0F3C;
+
+--color-accent-purple-50: #F4F0FF;
+--color-accent-purple-100: #DED0FF;
+--color-accent-purple-200: #CEB9FF;
+--color-accent-purple-300: #B899FE;
+--color-accent-purple-400: #AA85FE;
+--color-accent-purple-500: #9567FE;
+--color-accent-purple-600: #885EE7;
+--color-accent-purple-700: #6A49B4;
+--color-accent-purple-800: #52398C;
+--color-accent-purple-900: #3F2B6B;
+
+--color-accent-coral-50: #FFF2EC;
+--color-accent-coral-100: #FFD7C3;
+--color-accent-coral-200: #FFC4A5;
+--color-accent-coral-300: #FFA97C;
+--color-accent-coral-400: #FF9963;
+--color-accent-coral-500: #FF7F3C;
+--color-accent-coral-600: #E87437;
+--color-accent-coral-700: #B55A2B;
+--color-accent-coral-800: #8C4621;
+--color-accent-coral-900: #6B3519;
+
+--color-accent-orange-50: #FFF5E6;
+--color-accent-orange-100: #FFDFB0;
+--color-accent-orange-200: #FFD08A;
+--color-accent-orange-300: #FFBA54;
+--color-accent-orange-400: #FFAD33;
+--color-accent-orange-500: #FF9800;
+--color-accent-orange-600: #E88A00;
+--color-accent-orange-700: #B56C00;
+--color-accent-orange-800: #8C5400;
+--color-accent-orange-900: #6B4000;
+
+--color-accent-yellow-50: #FFFAE6;
+--color-accent-yellow-100: #FFF0B0;
+--color-accent-yellow-200: #FFE98A;
+--color-accent-yellow-300: #FFE054;
+--color-accent-yellow-400: #FFD933;
+--color-accent-yellow-500: #FFD000;
+--color-accent-yellow-600: #E8BD00;
+--color-accent-yellow-700: #B59400;
+--color-accent-yellow-800: #8C7200;
+--color-accent-yellow-900: #6B5700;
+
+  /* Spacing */
+  --spacing-xxx-sm: 4px;
+  --spacing-xx-sm: 6px;
+  --spacing-x-sm: 8px;
+  --spacing-sm: 12px;
+  --spacing-md: 16px;
+  --spacing-lg: 20px;
+  --spacing-x-lg: 24px;
+  --spacing-xx-lg: 32px;
+  --spacing-xxx-lg: 40px;
+  --spacing-huge: 64px;
+  --spacing-x-huge: 80px;
+  --spacing-xx-huge: 96px;
+
+  /* Typography - Font Sizes */
+  --font-size-base: 1rem;
+  --font-size-display-1-semiBold: 3.052rem;
+  --font-size-display-2-semiBold: 2.441rem;
+  --font-size-heading-1-semiBold: 1.953rem;
+  --font-size-heading-1-bold: 1.953rem;
+  --font-size-heading-2-semiBold: 1.563rem;
+  --font-size-heading-2-bold: 1.563rem;
+  --font-size-heading-2-extraBold: 1.563rem;
+  --font-size-heading-3-semiBold: 1.25rem;
+  --font-size-heading-3-bold: 1.25rem;
+  --font-size-heading-3-extraBold: 1.25rem;
+  --font-size-heading-4-semiBold: 1rem;
+  --font-size-heading-4-bold: 1rem;
+  --font-size-heading-4-extraBold: 1rem;
+  --font-size-heading-5-semiBold: 0.8rem;
+  --font-size-heading-5-bold: 0.8rem;
+  --font-size-heading-5-extraBold: 0.8rem;
+  --font-size-heading-6-semiBold: 0.64rem;
+  --font-size-heading-6-bold: 0.64rem;
+  --font-size-heading-6-extraBold: 0.64rem;
+  --font-size-label-1-medium: 0.75rem; /* 12px */
+  --font-size-label-2-medium: 0.875rem; /* 14px */
+
+  /* Effects - Border Radius */
+  --border-radius-sm: 8px;
+  --border-radius-md: 12px;
+  --border-radius-lg: 16px;
+  --border-radius-xl: 24px;
+  --border-radius-circle: 999px;
+
+  /* Effects - Box Shadow */
+  --box-shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.1);
+  --box-shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --box-shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* ------------------------------------------------------------- */
+/* 3. The @theme Directive (Your V4 Config) */
+/* ------------------------------------------------------------- */
+/* This is the new CSS-first way to configure your Tailwind theme in v4. */
+/* It now directly defines custom properties based on the variables in :root. */
+@theme {
+  --color-primary-50: var(--color-primary-50);
+  --color-primary-100: var(--color-primary-100);
+  --color-primary-200: var(--color-primary-200);
+  --color-primary-300: var(--color-primary-300);
+  --color-primary-400: var(--color-primary-400);
+  --color-primary-500: var(--color-primary-500);
+  --color-primary-600: var(--color-primary-600);
+  --color-primary-700: var(--color-primary-700);
+  --color-primary-800: var(--color-primary-800);
+  --color-primary-900: var(--color-primary-900);
+
+  --color-secondary-50: var(--color-secondary-50);
+  --color-secondary-100: var(--color-secondary-100);
+  --color-secondary-200: var(--color-secondary-200);
+  --color-secondary-300: var(--color-secondary-300);
+  --color-secondary-400: var(--color-secondary-400);
+  --color-secondary-500: var(--color-secondary-500);
+  --color-secondary-600: var(--color-secondary-600);
+  --color-secondary-700: var(--color-secondary-700);
+  --color-secondary-800: var(--color-secondary-800);
+  --color-secondary-900: var(--color-secondary-900);
+
+  --color-success-50: var(--color-success-50);
+  --color-success-100: var(--color-success-100);
+  --color-success-200: var(--color-success-200);
+  --color-success-300: var(--color-success-300);
+  --color-success-400: var(--color-success-400);
+  --color-success-500: var(--color-success-500);
+  --color-success-600: var(--color-success-600);
+  --color-success-700: var(--color-success-700);
+  --color-success-800: var(--color-success-800);
+  --color-success-900: var(--color-success-900);
+
+  --color-warning-50: var(--color-warning-50);
+  --color-warning-100: var(--color-warning-100);
+  --color-warning-200: var(--color-warning-200);
+  --color-warning-300: var(--color-warning-300);
+  --color-warning-400: var(--color-warning-400);
+  --color-warning-500: var(--color-warning-500);
+  --color-warning-600: var(--color-warning-600);
+  --color-warning-700: var(--color-warning-700);
+  --color-warning-800: var(--color-warning-800);
+  --color-warning-900: var(--color-warning-900);
+
+  --color-error-50: var(--color-error-50);
+  --color-error-100: var(--color-error-100);
+  --color-error-200: var(--color-error-200);
+  --color-error-300: var(--color-error-300);
+  --color-error-400: var(--color-error-400);
+  --color-error-500: var(--color-error-500);
+  --color-error-600: var(--color-error-600);
+  --color-error-700: var(--color-error-700);
+  --color-error-800: var(--color-error-800);
+  --color-error-900: var(--color-error-900);
+
+  --color-neutral-gray-50: var(--color-neutral-gray-50);
+  --color-neutral-gray-100: var(--color-neutral-gray-100);
+  --color-neutral-gray-200: var(--color-neutral-gray-200);
+  --color-neutral-gray-300: var(--color-neutral-gray-300);
+  --color-neutral-gray-400: var(--color-neutral-gray-400);
+  --color-neutral-gray-500: var(--color-neutral-gray-500);
+  --color-neutral-gray-600: var(--color-neutral-gray-600);
+  --color-neutral-gray-700: var(--color-neutral-gray-700);
+  --color-neutral-gray-800: var(--color-neutral-gray-800);
+  --color-neutral-gray-900: var(--color-neutral-gray-900);
+
+  --color-neutral-purple-50: var(--color-neutral-purple-50);
+  --color-neutral-purple-100: var(--color-neutral-purple-100);
+  --color-neutral-purple-200: var(--color-neutral-purple-200);
+  --color-neutral-purple-300: var(--color-neutral-purple-300);
+  --color-neutral-purple-400: var(--color-neutral-purple-400);
+  --color-neutral-purple-500: var(--color-neutral-purple-500);
+  --color-neutral-purple-600: var(--color-neutral-purple-600);
+  --color-neutral-purple-700: var(--color-neutral-purple-700);
+  --color-neutral-purple-800: var(--color-neutral-purple-800);
+  --color-neutral-purple-900: var(--color-neutral-purple-900);
+
+  --color-base-white: var(--color-base-white);
+  --color-base-white50: var(--color-base-white50);
+  --color-base-black: var(--color-base-black);
+  --color-base-black50: var(--color-base-black50);
+
+  --color-info-50: var(--color-info-50);
+  --color-info-100: var(--color-info-100);
+  --color-info-200: var(--color-info-200);
+  --color-info-300: var(--color-info-300);
+  --color-info-400: var(--color-info-400);
+  --color-info-500: var(--color-info-500);
+  --color-info-600: var(--color-info-600);
+  --color-info-700: var(--color-info-700);
+  --color-info-800: var(--color-info-800);
+  --color-info-900: var(--color-info-900);
+
+  --color-accent-blue-50: var(--color-accent-blue-50);
+  --color-accent-blue-100: var(--color-accent-blue-100);
+  --color-accent-blue-200: var(--color-accent-blue-200);
+  --color-accent-blue-300: var(--color-accent-blue-300);
+  --color-accent-blue-400: var(--color-accent-blue-400);
+  --color-accent-blue-500: var(--color-accent-blue-500);
+  --color-accent-blue-600: var(--color-accent-blue-600);
+  --color-accent-blue-700: var(--color-accent-blue-700);
+  --color-accent-blue-800: var(--color-accent-blue-800);
+  --color-accent-blue-900: var(--color-accent-blue-900);
+
+  --color-accent-mint-50: var(--color-accent-mint-50);
+  --color-accent-mint-100: var(--color-accent-mint-100);
+  --color-accent-mint-200: var(--color-accent-mint-200);
+  --color-accent-mint-300: var(--color-accent-mint-300);
+  --color-accent-mint-400: var(--color-accent-mint-400);
+  --color-accent-mint-500: var(--color-accent-mint-500);
+  --color-accent-mint-600: var(--color-accent-mint-600);
+  --color-accent-mint-700: var(--color-accent-mint-700);
+  --color-accent-mint-800: var(--color-accent-mint-800);
+  --color-accent-mint-900: var(--color-accent-mint-900);
+
+  --color-accent-magenta-50: var(--color-accent-magenta-50);
+  --color-accent-magenta-100: var(--color-accent-magenta-100);
+  --color-accent-magenta-200: var(--color-accent-magenta-200);
+  --color-accent-magenta-300: var(--color-accent-magenta-300);
+  --color-accent-magenta-400: var(--color-accent-magenta-400);
+  --color-accent-magenta-500: var(--color-accent-magenta-500);
+  --color-accent-magenta-600: var(--color-accent-magenta-600);
+  --color-accent-magenta-700: var(--color-accent-magenta-700);
+  --color-accent-magenta-800: var(--color-accent-magenta-800);
+  --color-accent-magenta-900: var(--color-accent-magenta-900);
+
+  --color-accent-purple-50: var(--color-accent-purple-50);
+  --color-accent-purple-100: var(--color-accent-purple-100);
+  --color-accent-purple-200: var(--color-accent-purple-200);
+  --color-accent-purple-300: var(--color-accent-purple-300);
+  --color-accent-purple-400: var(--color-accent-purple-400);
+  --color-accent-purple-500: var(--color-accent-purple-500);
+  --color-accent-purple-600: var(--color-accent-purple-600);
+  --color-accent-purple-700: var(--color-accent-purple-700);
+  --color-accent-purple-800: var(--color-accent-purple-800);
+  --color-accent-purple-900: var(--color-accent-purple-900);
+
+  --color-accent-coral-50: var(--color-accent-coral-50);
+  --color-accent-coral-100: var(--color-accent-coral-100);
+  --color-accent-coral-200: var(--color-accent-coral-200);
+  --color-accent-coral-300: var(--color-accent-coral-300);
+  --color-accent-coral-400: var(--color-accent-coral-400);
+  --color-accent-coral-500: var(--color-accent-coral-500);
+  --color-accent-coral-600: var(--color-accent-coral-600);
+  --color-accent-coral-700: var(--color-accent-coral-700);
+  --color-accent-coral-800: var(--color-accent-coral-800);
+  --color-accent-coral-900: var(--color-accent-coral-900);
+
+  --color-accent-orange-50: var(--color-accent-orange-50);
+  --color-accent-orange-100: var(--color-accent-orange-100);
+  --color-accent-orange-200: var(--color-accent-orange-200);
+  --color-accent-orange-300: var(--color-accent-orange-300);
+  --color-accent-orange-400: var(--color-accent-orange-400);
+  --color-accent-orange-500: var(--color-accent-orange-500);
+  --color-accent-orange-600: var(--color-accent-orange-600);
+  --color-accent-orange-700: var(--color-accent-orange-700);
+  --color-accent-orange-800: var(--color-accent-orange-800);
+  --color-accent-orange-900: var(--color-accent-orange-900);
+
+  --color-accent-yellow-50: var(--color-accent-yellow-50);
+  --color-accent-yellow-100: var(--color-accent-yellow-100);
+  --color-accent-yellow-200: var(--color-accent-yellow-200);
+  --color-accent-yellow-300: var(--color-accent-yellow-300);
+  --color-accent-yellow-400: var(--color-accent-yellow-400);
+  --color-accent-yellow-500: var(--color-accent-yellow-500);
+  --color-accent-yellow-600: var(--color-accent-yellow-600);
+  --color-accent-yellow-700: var(--color-accent-yellow-700);
+  --color-accent-yellow-800: var(--color-accent-yellow-800);
+  --color-accent-yellow-900: var(--color-accent-yellow-900);
+
+  /* Spacing */
+  --spacing-xxx-sm: var(--spacing-xxx-sm);
+  --spacing-xx-sm: var(--spacing-xx-sm);
+  --spacing-x-sm: var(--spacing-x-sm);
+  --spacing-sm: var(--spacing-sm);
+  --spacing-md: var(--spacing-md);
+  --spacing-lg: var(--spacing-lg);
+  --spacing-x-lg: var(--spacing-x-lg);
+  --spacing-xx-lg: var(--spacing-xx-lg);
+  --spacing-xxx-lg: var(--spacing-xxx-lg);
+  --spacing-huge: var(--spacing-huge);
+  --spacing-x-huge: var(--spacing-x-huge);
+  --spacing-xx-huge: var(--spacing-xx-huge);
+
+  /* Typography - Font Sizes */
+  --font-size-base: var(--font-size-base);
+  --font-size-display-1-semiBold: var(--font-size-display-1-semiBold);
+  --font-size-display-2-semiBold: var(--font-size-display-2-semiBold);
+  --font-size-heading-1-semiBold: var(--font-size-heading-1-semiBold);
+  --font-size-heading-1-bold: var(--font-size-heading-1-bold);
+  --font-size-heading-2-semiBold: var(--font-size-heading-2-semiBold);
+  --font-size-heading-2-bold: var(--font-size-heading-2-bold);
+  --font-size-heading-2-extraBold: var(--font-size-heading-2-extraBold);
+  --font-size-heading-3-semiBold: var(--font-size-heading-3-semiBold);
+  --font-size-heading-3-bold: var(--font-size-heading-3-bold);
+  --font-size-heading-3-extraBold: var(--font-size-heading-3-extraBold);
+  --font-size-heading-4-semiBold: var(--font-size-heading-4-semiBold);
+  --font-size-heading-4-bold: var(--font-size-heading-4-bold);
+  --font-size-heading-4-extraBold: var(--font-size-heading-4-extraBold);
+  --font-size-heading-5-semiBold: var(--font-size-heading-5-semiBold);
+  --font-size-heading-5-bold: var(--font-size-heading-5-bold);
+  --font-size-heading-5-extraBold: var(--font-size-heading-5-extraBold);
+  --font-size-heading-6-semiBold: var(--font-size-heading-6-semiBold);
+  --font-size-heading-6-bold: var(--font-size-heading-6-bold);
+  --font-size-heading-6-extraBold: var(--font-size-heading-6-extraBold);
+  --font-size-label-1-medium: 0.75rem; /* 12px */
+  --font-size-label-2-medium: 0.875rem; /* 14px */
+
+  /* Effects - Border Radius */
+  --border-radius-sm: var(--border-radius-sm);
+  --border-radius-md: var(--border-radius-md);
+  --border-radius-lg: var(--border-radius-lg);
+  --border-radius-xl: var(--border-radius-xl);
+  --border-radius-circle: var(--border-radius-circle);
+
+  /* Effects - Box Shadow */
+  --box-shadow-sm: var(--box-shadow-sm);
+  --box-shadow-md: var(--box-shadow-md);
+  --box-shadow-lg: var(--box-shadow-lg);
+}
+
+/* 4. Global Base Styles */
+body {
+  font-family: var(--font-primary);
+}

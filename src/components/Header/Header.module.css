@@ -1,0 +1,33 @@
+/* src/components/Header/Header.module.css */
+
+/*
+  CSS Modules are used for component-specific styles that are
+  difficult or impossible to achieve purely with Tailwind utility classes.
+  
+  For this simple header, most styling is done with Tailwind.
+  However, if you had complex animations, unique pseudo-elements,
+  or very specific layouts that Tailwind doesn't directly support,
+  you would define them here.
+
+  Example: A custom animation for the logo on hover.
+*/
+.logoAnimation:hover {
+  transform: rotate(5deg) scale(1.05);
+  transition: transform 0.3s ease-in-out;
+}
+
+/*
+  You could also define custom component-level classes here
+  that use your custom CSS variables (from globals.css)
+  or even raw hex codes if they are truly unique to this component.
+*/
+.custom-header-background {
+  background-color: #f0f0f0; /* A color not in your theme, specific to this header */
+  padding: 1rem 2rem;
+}
+
+/*
+  Remember: When you define a class here, it gets "scoped" automatically
+  by Next.js (or your build tool). So, `.logoAnimation` becomes something
+  like `Header_logoAnimation__xyz123` in the final CSS, preventing conflicts.
+*/
