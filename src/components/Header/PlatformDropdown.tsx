@@ -1,5 +1,5 @@
 import React from 'react';
-import FeatureCard from './FeatureCard'; // Import the FeatureCard component
+import FeatureCard from './FeatureCard'; 
 import {
   Send2,
   Hierarchy,
@@ -15,17 +15,15 @@ import {
   PasswordCheck
 } from 'iconsax-react';
 
-// Define the interface for a single feature/solution item
 interface FeatureItem {
-  icon: React.ElementType; // SVG path or component for the icon
-  title: string; // The title of the feature/solution
-  description: string; // A brief description of the feature/solution
-  bgColor?: string; // Optional background color for the card (e.g., for "Shopper")
-  textColor?: string; // Optional text color for the card
+  icon: React.ElementType;
+  title: string;
+  description: string;
+  bgColor?: string;
+  textColor?: string;
 }
 
 const PlatformDropdown = () => {
-  // Sample data for Features and Solutions with explicit typing
   const features: FeatureItem[] = [
     {
       icon: Send2,
@@ -53,7 +51,7 @@ const PlatformDropdown = () => {
       description: "Target precisely with AI-powered dynamic customer segments.",
     },
     {
-      icon: ScanBarcode, // Example generic icon path for QR code
+      icon: ScanBarcode, 
       title: "QR codes",
       description: "Turn in-person touchpoints into subscribers with scannable, branded QR codes for packaging, signage, and events.",
     },
@@ -74,7 +72,7 @@ const PlatformDropdown = () => {
       icon: ShoppingCart,
       title: "Shopper",
       description: "Boost AOV and conversion with AI-powered shopping flows, cart recovery, and product recommendations.",
-      bgColor: "bg-accent-coral-500", // Specific background color for Shopper
+      bgColor: "bg-accent-coral-500",
       textColor: "text-white"
     },
     {
@@ -95,9 +93,7 @@ const PlatformDropdown = () => {
   ];
 
   return (
-    // Main container for the dropdown content
-    <div className="absolute top-full left-0 right-0 mx-auto mt-4 pt-3 pr-8 pb-3 pl-8 bg-white/15 shadow-md rounded-[24px] border border-white/15 backdrop-blur-md z-50 w-[1248px] grid grid-cols-2 gap-x-[40px]"> {/* Removed fixed height, added gap-x for horizontal gap */}
-      {/* Left Column: Features Section */}
+    <div className="absolute top-full w-full left-0 right-0 mx-auto mt-4 pt-3 pr-8 pb-3 pl-8 bg-[#29314b]/98 rounded-[24px] backdrop-blur-[400px] border border-white/15 z-50 w-[1248px] grid grid-cols-2 gap-x-[40px]">
       <div>
         <div className="flex justify-between items-center mb-6">
           <h2 className="text-white text-lg font-bold">Features</h2>
@@ -105,23 +101,21 @@ const PlatformDropdown = () => {
             View All Features &rarr;
           </a>
         </div>
-        <div className="grid grid-cols-2 gap-4"> {/* Nested grid for 2 columns of cards within Features section */}
+        <div className="grid grid-cols-2 gap-4"> 
           {features.map((feature, index) => (
             <FeatureCard
               key={index}
               icon={feature.icon}
               title={feature.title}
               description={feature.description}
-              width="w-full" // Let the grid determine the width
+              width="w-full" 
             />
           ))}
         </div>
       </div>
-
-      {/* Right Column: Solutions Section */}
       <div>
         <h2 className="text-white text-lg font-bold mb-6">Solutions</h2>
-        <div className="grid grid-cols-1 gap-4"> {/* Nested grid for 1 column (4 rows) of cards within Solutions section */}
+        <div className="grid grid-cols-1 gap-4"> 
           {solutions.map((solution, index) => (
             <FeatureCard
               key={index}
@@ -130,7 +124,7 @@ const PlatformDropdown = () => {
               description={solution.description}
               bgColor={solution.bgColor}
               textColor={solution.textColor}
-              width="w-[493px]" // Explicitly set width for Solutions cards
+              width="w-[493px]"
             />
           ))}
         </div>
