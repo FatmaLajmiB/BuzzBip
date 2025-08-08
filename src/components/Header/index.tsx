@@ -22,7 +22,7 @@ const Header = () => {
   };
 
   return (
-    <header className="w-[1248px] max-w-full mx-auto h-16 pt-3 pr-8 pb-3 pl-8 flex items-center justify-between bg-white/15 shadow-md rounded-full border border-white/15 backdrop-blur-md">
+    <header className=" w-full h-16 pt-3 pr-8 pb-3 pl-8 flex items-center justify-between bg-white/15 shadow-md rounded-full border border-white/15 backdrop-blur-md">
       <div className="flex items-center">
         <img
           src="/images/logo-buzzbip.svg"
