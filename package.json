@@ -1,12 +1,15 @@
 {
   "name": "buzzbip-landing-page",
+  "type": "module",
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "npm run generate-css-vars && next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
+    ,
+    "generate-css-vars": "node scripts/generate-css-vars.mjs"
   },
   "dependencies": {
     "@radix-ui/react-slot": "^1.2.3",
