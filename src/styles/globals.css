@@ -10,10 +10,17 @@
 /* 2. Custom CSS Variables (from your themes/*.ts files) */
 /* ------------------------------------------------------------- */
 /* All your design tokens are now defined as CSS variables in the :root selector. */
+
 :root {
+  --font-size-label-3-medium: 18px;
+  --line-height-label-3-medium: 24px;
+  --font-weight-label-3-medium: 500;
+  --font-style-label-3-medium: Medium;
+  --letter-spacing-label-3-medium: 0.75%;
+
   /* Fonts */
-  --font-primary: "Parkinsans", sans-serif;
-  --font-secondary: "Georgia", serif;
+  --font-primary: "\"Parkinsans\", sans-serif";
+  --font-secondary: "\"Georgia\", serif";
 
   /* Colors */
   --color-primary-50: #F2EEFE;
@@ -26,7 +33,6 @@
 --color-primary-700: #5A3AAC;
 --color-primary-800: #462D85;
 --color-primary-900: #352266;
-
 --color-secondary-50: #E6FFF7;
 --color-secondary-100: #B0FEE6;
 --color-secondary-200: #8AFDDA;
@@ -37,7 +43,6 @@
 --color-secondary-700: #00B27C;
 --color-secondary-800: #008A60;
 --color-secondary-900: #006949;
-
 --color-success-50: #ECFAEF;
 --color-success-100: #C4EFCD;
 --color-success-200: #A8E7B4;
@@ -48,7 +53,6 @@
 --color-success-700: #2E9042;
 --color-success-800: #247033;
 --color-success-900: #1B5527;
-
 --color-warning-50: #FFFAEC;
 --color-warning-100: #FFEFC4;
 --color-warning-200: #FFE7A7;
@@ -59,7 +63,6 @@
 --color-warning-700: #B5902D;
 --color-warning-800: #8C7023;
 --color-warning-900: #6B551B;
-
 --color-error-50: #FEEBEB;
 --color-error-100: #FCC2C2;
 --color-error-200: #FAA5A5;
@@ -70,7 +73,6 @@
 --color-error-700: #AD2A2A;
 --color-error-800: #862020;
 --color-error-900: #661919;
-
 --color-neutral-gray-50: #F3F4F4;
 --color-neutral-gray-100: #DBDBDD;
 --color-neutral-gray-200: #CACACC;
@@ -81,7 +83,6 @@
 --color-neutral-gray-700: #636367;
 --color-neutral-gray-800: #4C4D50;
 --color-neutral-gray-900: #3A3B3D;
-
 --color-neutral-purple-50: #F5F6F8;
 --color-neutral-purple-100: #E1E2E8;
 --color-neutral-purple-200: #D3D4DD;
@@ -92,12 +93,10 @@
 --color-neutral-purple-700: #717281;
 --color-neutral-purple-800: #575964;
 --color-neutral-purple-900: #43444C;
-
 --color-base-white: #FFFFFF;
 --color-base-white50: rgba(255, 255, 255, 0.5);
 --color-base-black: #0F0F0F;
 --color-base-black50: rgba(15, 15, 15, 0.5);
-
 --color-info-50: #EBF5FE;
 --color-info-100: #C2E1FD;
 --color-info-200: #A5D3FC;
@@ -108,7 +107,6 @@
 --color-info-700: #2A71B1;
 --color-info-800: #205789;
 --color-info-900: #194369;
-
 --color-accent-blue-50: #E8EBFB;
 --color-accent-blue-100: #B6BFF2;
 --color-accent-blue-200: #93A1EC;
@@ -119,7 +117,6 @@
 --color-accent-blue-700: #0F2498;
 --color-accent-blue-800: #0C1C76;
 --color-accent-blue-900: #09155A;
-
 --color-accent-mint-50: #E9FCF8;
 --color-accent-mint-100: #BBF7E8;
 --color-accent-mint-200: #9AF3DD;
@@ -130,7 +127,6 @@
 --color-accent-mint-700: #1AA281;
 --color-accent-mint-800: #147D64;
 --color-accent-mint-900: #0F604C;
-
 --color-accent-magenta-50: #FCE9F4;
 --color-accent-magenta-100: #F6BBDC;
 --color-accent-magenta-200: #F29ACB;
@@ -141,7 +137,6 @@
 --color-accent-magenta-700: #A11A66;
 --color-accent-magenta-800: #7D144F;
 --color-accent-magenta-900: #5F0F3C;
-
 --color-accent-purple-50: #F4F0FF;
 --color-accent-purple-100: #DED0FF;
 --color-accent-purple-200: #CEB9FF;
@@ -152,7 +147,6 @@
 --color-accent-purple-700: #6A49B4;
 --color-accent-purple-800: #52398C;
 --color-accent-purple-900: #3F2B6B;
-
 --color-accent-coral-50: #FFF2EC;
 --color-accent-coral-100: #FFD7C3;
 --color-accent-coral-200: #FFC4A5;
@@ -163,7 +157,6 @@
 --color-accent-coral-700: #B55A2B;
 --color-accent-coral-800: #8C4621;
 --color-accent-coral-900: #6B3519;
-
 --color-accent-orange-50: #FFF5E6;
 --color-accent-orange-100: #FFDFB0;
 --color-accent-orange-200: #FFD08A;
@@ -174,7 +167,6 @@
 --color-accent-orange-700: #B56C00;
 --color-accent-orange-800: #8C5400;
 --color-accent-orange-900: #6B4000;
-
 --color-accent-yellow-50: #FFFAE6;
 --color-accent-yellow-100: #FFF0B0;
 --color-accent-yellow-200: #FFE98A;
@@ -186,55 +178,105 @@
 --color-accent-yellow-800: #8C7200;
 --color-accent-yellow-900: #6B5700;
 
-  /* Spacing */
-  --spacing-xxx-sm: 4px;
-  --spacing-xx-sm: 6px;
-  --spacing-x-sm: 8px;
-  --spacing-sm: 12px;
-  --spacing-md: 16px;
-  --spacing-lg: 20px;
-  --spacing-x-lg: 24px;
-  --spacing-xx-lg: 32px;
-  --spacing-xxx-lg: 40px;
-  --spacing-huge: 64px;
-  --spacing-x-huge: 80px;
-  --spacing-xx-huge: 96px;
 
-  /* Typography - Font Sizes */
+  /* Spacing */
+  --spacing-xxxsm: 4px;
+--spacing-xxxm: 6px;
+--spacing-xm: 8px;
+--spacing-sm: 12px;
+--spacing-md: 16px;
+--spacing-big: 20px;
+--spacing-xbig: 24px;
+--spacing-xxbig: 28px;
+--spacing-xxxbig: 32px;
+--spacing-lg: 40px;
+--spacing-xlg: 48px;
+--spacing-xxlg: 64px;
+
+
+  /* Typography - Font Sizes, Line Heights, Font Weights, Letter Spacing */
   --font-size-base: 1rem;
-  --font-size-display-1-semiBold: 3.052rem;
-  --font-size-display-2-semiBold: 2.441rem;
-  --font-size-heading-1-semiBold: 1.953rem;
-  --font-size-heading-1-bold: 1.953rem;
-  --font-size-heading-2-semiBold: 1.563rem;
-  --font-size-heading-2-bold: 1.563rem;
-  --font-size-heading-2-extraBold: 1.563rem;
-  --font-size-heading-3-semiBold: 1.25rem;
-  --font-size-heading-3-bold: 1.25rem;
-  --font-size-heading-3-extraBold: 1.25rem;
-  --font-size-heading-4-semiBold: 1rem;
-  --font-size-heading-4-bold: 1rem;
-  --font-size-heading-4-extraBold: 1rem;
-  --font-size-heading-5-semiBold: 0.8rem;
-  --font-size-heading-5-bold: 0.8rem;
-  --font-size-heading-5-extraBold: 0.8rem;
-  --font-size-heading-6-semiBold: 0.64rem;
-  --font-size-heading-6-bold: 0.64rem;
-  --font-size-heading-6-extraBold: 0.64rem;
-  --font-size-label-1-medium: 0.75rem; /* 12px */
-  --font-size-label-2-medium: 0.875rem; /* 14px */
+--line-height-base: 1.5;
+--font-size-display-1-semi-bold: 3.052rem;
+--line-height-display-1-semi-bold: 1.2;
+--font-weight-display-1-semi-bold: 600;
+--letter-spacing-display-1-semi-bold: 0.75%;
+--font-size-display-2-semi-bold: 4rem;
+--line-height-display-2-semi-bold: 4.5rem;
+--font-weight-display-2-semi-bold: 600;
+--letter-spacing-display-2-semi-bold: 0.75%;
+--font-size-heading-1-semi-bold: 1.953rem;
+--line-height-heading-1-semi-bold: 1.3;
+--font-weight-heading-1-semi-bold: 600;
+--font-size-heading-1-bold: 1.953rem;
+--line-height-heading-1-bold: 1.3;
+--font-weight-heading-1-bold: 700;
+--font-size-heading-2-semi-bold: 1.563rem;
+--line-height-heading-2-semi-bold: 1.35;
+--font-weight-heading-2-semi-bold: 600;
+--font-size-heading-2-bold: 1.563rem;
+--line-height-heading-2-bold: 1.35;
+--font-weight-heading-2-bold: 700;
+--font-size-heading-2-extra-bold: 1.563rem;
+--line-height-heading-2-extra-bold: 1.35;
+--font-weight-heading-2-extra-bold: 800;
+--font-size-heading-3-semi-bold: 1.25rem;
+--line-height-heading-3-semi-bold: 1.4;
+--font-weight-heading-3-semi-bold: 600;
+--font-size-heading-3-bold: 1.25rem;
+--line-height-heading-3-bold: 1.4;
+--font-weight-heading-3-bold: 700;
+--font-size-heading-3-extra-bold: 1.25rem;
+--line-height-heading-3-extra-bold: 1.4;
+--font-weight-heading-3-extra-bold: 800;
+--font-size-heading-4-semi-bold: 1rem;
+--line-height-heading-4-semi-bold: 1.5;
+--font-weight-heading-4-semi-bold: 600;
+--font-size-heading-4-bold: 1rem;
+--line-height-heading-4-bold: 1.5;
+--font-weight-heading-4-bold: 700;
+--font-size-heading-4-extra-bold: 1rem;
+--line-height-heading-4-extra-bold: 1.5;
+--font-weight-heading-4-extra-bold: 800;
+--font-size-heading-5-semi-bold: 0.8rem;
+--line-height-heading-5-semi-bold: 1.6;
+--font-weight-heading-5-semi-bold: 600;
+--font-size-heading-5-bold: 0.8rem;
+--line-height-heading-5-bold: 1.6;
+--font-weight-heading-5-bold: 700;
+--font-size-heading-5-extra-bold: 0.8rem;
+--line-height-heading-5-extra-bold: 1.6;
+--font-weight-heading-5-extra-bold: 800;
+--font-size-heading-6-semi-bold: 0.64rem;
+--line-height-heading-6-semi-bold: 1.6;
+--font-weight-heading-6-semi-bold: 600;
+--font-size-heading-6-bold: 0.64rem;
+--line-height-heading-6-bold: 1.6;
+--font-weight-heading-6-bold: 700;
+--font-size-heading-6-extra-bold: 0.64rem;
+--line-height-heading-6-extra-bold: 1.6;
+--font-weight-heading-6-extra-bold: 800;
+--font-size-label-1-medium: 0.75rem;
+--line-height-label-1-medium: 1.667;
+--font-weight-label-1-medium: 500;
+--letter-spacing-label-1-medium: 0.0075em;
+--font-size-label-2-medium: 0.875rem;
+--line-height-label-2-medium: 1.428;
+--font-weight-label-2-medium: 500;
+--letter-spacing-label-2-medium: 0.0075em;
+
 
   /* Effects - Border Radius */
   --border-radius-sm: 8px;
-  --border-radius-md: 12px;
-  --border-radius-lg: 16px;
-  --border-radius-xl: 24px;
-  --border-radius-circle: 999px;
+--border-radius-md: 12px;
+--border-radius-lg: 16px;
+--border-radius-xl: 24px;
+--border-radius-circle: 999px;
+--box-shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.1);
+--box-shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+--box-shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
 
-  /* Effects - Box Shadow */
-  --box-shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.1);
-  --box-shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
-  --box-shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+
 }
 
 /* ------------------------------------------------------------- */
@@ -429,27 +471,74 @@
 
   /* Typography - Font Sizes */
   --font-size-base: var(--font-size-base);
-  --font-size-display-1-semiBold: var(--font-size-display-1-semiBold);
-  --font-size-display-2-semiBold: var(--font-size-display-2-semiBold);
-  --font-size-heading-1-semiBold: var(--font-size-heading-1-semiBold);
+  --line-height-base: var(--line-height-base);
+  --font-size-display-1-semi-bold: var(--font-size-display-1-semi-bold);
+  --line-height-display-1-semi-bold: var(--line-height-display-1-semi-bold);
+  --font-weight-display-1-semi-bold: var(--font-weight-display-1-semi-bold);
+  --letter-spacing-display-1-semi-bold: var(--letter-spacing-display-1-semi-bold);
+  --font-size-display-2-semi-bold: var(--font-size-display-2-semi-bold);
+  --line-height-display-2-semi-bold: var(--line-height-display-2-semi-bold);
+  --font-weight-display-2-semi-bold: var(--font-weight-display-2-semi-bold);
+  --letter-spacing-display-2-semi-bold: var(--letter-spacing-display-2-semi-bold);
+  --font-size-heading-1-semi-bold: var(--font-size-heading-1-semi-bold);
+  --line-height-heading-1-semi-bold: var(--line-height-heading-1-semi-bold);
+  --font-weight-heading-1-semi-bold: var(--font-weight-heading-1-semi-bold);
   --font-size-heading-1-bold: var(--font-size-heading-1-bold);
-  --font-size-heading-2-semiBold: var(--font-size-heading-2-semiBold);
+  --line-height-heading-1-bold: var(--line-height-heading-1-bold);
+  --font-weight-heading-1-bold: var(--font-weight-heading-1-bold);
+  --font-size-heading-2-semi-bold: var(--font-size-heading-2-semi-bold);
+  --line-height-heading-2-semi-bold: var(--line-height-heading-2-semi-bold);
+  --font-weight-heading-2-semi-bold: var(--font-weight-heading-2-semi-bold);
   --font-size-heading-2-bold: var(--font-size-heading-2-bold);
-  --font-size-heading-2-extraBold: var(--font-size-heading-2-extraBold);
-  --font-size-heading-3-semiBold: var(--font-size-heading-3-semiBold);
+  --line-height-heading-2-bold: var(--line-height-heading-2-bold);
+  --font-weight-heading-2-bold: var(--font-weight-heading-2-bold);
+  --font-size-heading-2-extra-bold: var(--font-size-heading-2-extra-bold);
+  --line-height-heading-2-extra-bold: var(--line-height-heading-2-extra-bold);
+  --font-weight-heading-2-extra-bold: var(--font-weight-heading-2-extra-bold);
+  --font-size-heading-3-semi-bold: var(--font-size-heading-3-semi-bold);
+  --line-height-heading-3-semi-bold: var(--line-height-heading-3-semi-bold);
+  --font-weight-heading-3-semi-bold: var(--font-weight-heading-3-semi-bold);
   --font-size-heading-3-bold: var(--font-size-heading-3-bold);
-  --font-size-heading-3-extraBold: var(--font-size-heading-3-extraBold);
-  --font-size-heading-4-semiBold: var(--font-size-heading-4-semiBold);
+  --line-height-heading-3-bold: var(--line-height-heading-3-bold);
+  --font-weight-heading-3-bold: var(--font-weight-heading-3-bold);
+  --font-size-heading-3-extra-bold: var(--font-size-heading-3-extra-bold);
+  --line-height-heading-3-extra-bold: var(--line-height-heading-3-extra-bold);
+  --font-weight-heading-3-extra-bold: var(--font-weight-heading-3-extra-bold);
+  --font-size-heading-4-semi-bold: var(--font-size-heading-4-semi-bold);
+  --line-height-heading-4-semi-bold: var(--line-height-heading-4-semi-bold);
+  --font-weight-heading-4-semi-bold: var(--font-weight-heading-4-semi-bold);
   --font-size-heading-4-bold: var(--font-size-heading-4-bold);
-  --font-size-heading-4-extraBold: var(--font-size-heading-4-extraBold);
-  --font-size-heading-5-semiBold: var(--font-size-heading-5-semiBold);
+  --line-height-heading-4-bold: var(--line-height-heading-4-bold);
+  --font-weight-heading-4-bold: var(--font-weight-heading-4-bold);
+  --font-size-heading-4-extra-bold: var(--font-size-heading-4-extra-bold);
+  --line-height-heading-4-extra-bold: var(--line-height-heading-4-extra-bold);
+  --font-weight-heading-4-extra-bold: var(--font-weight-heading-4-extra-bold);
+  --font-size-heading-5-semi-bold: var(--font-size-heading-5-semi-bold);
+  --line-height-heading-5-semi-bold: var(--line-height-heading-5-semi-bold);
+  --font-weight-heading-5-semi-bold: var(--font-weight-heading-5-semi-bold);
   --font-size-heading-5-bold: var(--font-size-heading-5-bold);
-  --font-size-heading-5-extraBold: var(--font-size-heading-5-extraBold);
-  --font-size-heading-6-semiBold: var(--font-size-heading-6-semiBold);
+  --line-height-heading-5-bold: var(--line-height-heading-5-bold);
+  --font-weight-heading-5-bold: var(--font-weight-heading-5-bold);
+  --font-size-heading-5-extra-bold: var(--font-size-heading-5-extra-bold);
+  --line-height-heading-5-extra-bold: var(--line-height-heading-5-extra-bold);
+  --font-weight-heading-5-extra-bold: var(--font-weight-heading-5-extra-bold);
+  --font-size-heading-6-semi-bold: var(--font-size-heading-6-semi-bold);
+  --line-height-heading-6-semi-bold: var(--line-height-heading-6-semi-bold);
+  --font-weight-heading-6-semi-bold: var(--font-weight-heading-6-semi-bold);
   --font-size-heading-6-bold: var(--font-size-heading-6-bold);
-  --font-size-heading-6-extraBold: var(--font-size-heading-6-extraBold);
-  --font-size-label-1-medium: 0.75rem; /* 12px */
-  --font-size-label-2-medium: 0.875rem; /* 14px */
+  --line-height-heading-6-bold: var(--line-height-heading-6-bold);
+  --font-weight-heading-6-bold: var(--font-weight-heading-6-bold);
+  --font-size-heading-6-extra-bold: var(--font-size-heading-6-extra-bold);
+  --line-height-heading-6-extra-bold: var(--line-height-heading-6-extra-bold);
+  --font-weight-heading-6-extra-bold: var(--font-weight-heading-6-extra-bold);
+  --font-size-label-1-medium: var(--font-size-label-1-medium);
+  --line-height-label-1-medium: var(--line-height-label-1-medium);
+  --font-weight-label-1-medium: var(--font-weight-label-1-medium);
+  --letter-spacing-label-1-medium: var(--letter-spacing-label-1-medium);
+  --font-size-label-2-medium: var(--font-size-label-2-medium);
+  --line-height-label-2-medium: var(--line-height-label-2-medium);
+  --font-weight-label-2-medium: var(--font-weight-label-2-medium);
+  --letter-spacing-label-2-medium: var(--letter-spacing-label-2-medium);
 
   /* Effects - Border Radius */
   --border-radius-sm: var(--border-radius-sm);
@@ -465,6 +554,132 @@
 }
 
 /* 4. Global Base Styles */
+
 body {
   font-family: var(--font-primary);
 }
+
+/* ------------------------------------------------------------- */
+/* 5. Typography Utility Classes (auto-generated from design tokens) */
+
+/* ------------------------------------------------------------- */
+
+
+
+.text-display-1-semiBold {
+  font-size: var(--font-size-display-1-semi-bold);
+  line-height: var(--line-height-display-1-semi-bold);
+  font-weight: var(--font-weight-display-1-semi-bold);
+  letter-spacing: var(--letter-spacing-display-1-semi-bold);
+}
+.text-display-2-semiBold {
+  font-size: var(--font-size-display-2-semi-bold);
+  line-height: var(--line-height-display-2-semi-bold);
+  font-weight: var(--font-weight-display-2-semi-bold);
+  letter-spacing: var(--letter-spacing-display-2-semi-bold);
+}
+.text-heading-1-semiBold {
+  font-size: var(--font-size-heading-1-semi-bold);
+  line-height: var(--line-height-heading-1-semi-bold);
+  font-weight: var(--font-weight-heading-1-semi-bold);
+}
+.text-heading-1-bold {
+  font-size: var(--font-size-heading-1-bold);
+  line-height: var(--line-height-heading-1-bold);
+  font-weight: var(--font-weight-heading-1-bold);
+}
+.text-heading-2-semiBold {
+  font-size: var(--font-size-heading-2-semi-bold);
+  line-height: var(--line-height-heading-2-semi-bold);
+  font-weight: var(--font-weight-heading-2-semi-bold);
+}
+.text-heading-2-bold {
+  font-size: var(--font-size-heading-2-bold);
+  line-height: var(--line-height-heading-2-bold);
+  font-weight: var(--font-weight-heading-2-bold);
+}
+.text-heading-2-extraBold {
+  font-size: var(--font-size-heading-2-extra-bold);
+  line-height: var(--line-height-heading-2-extra-bold);
+  font-weight: var(--font-weight-heading-2-extra-bold);
+}
+.text-heading-3-semiBold {
+  font-size: var(--font-size-heading-3-semi-bold);
+  line-height: var(--line-height-heading-3-semi-bold);
+  font-weight: var(--font-weight-heading-3-semi-bold);
+}
+.text-heading-3-bold {
+  font-size: var(--font-size-heading-3-bold);
+  line-height: var(--line-height-heading-3-bold);
+  font-weight: var(--font-weight-heading-3-bold);
+}
+.text-heading-3-extraBold {
+  font-size: var(--font-size-heading-3-extra-bold);
+  line-height: var(--line-height-heading-3-extra-bold);
+  font-weight: var(--font-weight-heading-3-extra-bold);
+}
+.text-heading-4-semiBold {
+  font-size: var(--font-size-heading-4-semi-bold);
+  line-height: var(--line-height-heading-4-semi-bold);
+  font-weight: var(--font-weight-heading-4-semi-bold);
+}
+.text-heading-4-bold {
+  font-size: var(--font-size-heading-4-bold);
+  line-height: var(--line-height-heading-4-bold);
+  font-weight: var(--font-weight-heading-4-bold);
+}
+.text-heading-4-extraBold {
+  font-size: var(--font-size-heading-4-extra-bold);
+  line-height: var(--line-height-heading-4-extra-bold);
+  font-weight: var(--font-weight-heading-4-extra-bold);
+}
+.text-heading-5-semiBold {
+  font-size: var(--font-size-heading-5-semi-bold);
+  line-height: var(--line-height-heading-5-semi-bold);
+  font-weight: var(--font-weight-heading-5-semi-bold);
+}
+.text-heading-5-bold {
+  font-size: var(--font-size-heading-5-bold);
+  line-height: var(--line-height-heading-5-bold);
+  font-weight: var(--font-weight-heading-5-bold);
+}
+.text-heading-5-extraBold {
+  font-size: var(--font-size-heading-5-extra-bold);
+  line-height: var(--line-height-heading-5-extra-bold);
+  font-weight: var(--font-weight-heading-5-extra-bold);
+}
+.text-heading-6-semiBold {
+  font-size: var(--font-size-heading-6-semi-bold);
+  line-height: var(--line-height-heading-6-semi-bold);
+  font-weight: var(--font-weight-heading-6-semi-bold);
+}
+.text-heading-6-bold {
+  font-size: var(--font-size-heading-6-bold);
+  line-height: var(--line-height-heading-6-bold);
+  font-weight: var(--font-weight-heading-6-bold);
+}
+.text-heading-6-extraBold {
+  font-size: var(--font-size-heading-6-extra-bold);
+  line-height: var(--line-height-heading-6-extra-bold);
+  font-weight: var(--font-weight-heading-6-extra-bold);
+}
+.text-label-1-medium {
+  font-size: var(--font-size-label-1-medium);
+  line-height: var(--line-height-label-1-medium);
+  font-weight: var(--font-weight-label-1-medium);
+  letter-spacing: var(--letter-spacing-label-1-medium);
+}
+.text-label-2-medium {
+  font-size: var(--font-size-label-2-medium);
+  line-height: var(--line-height-label-2-medium);
+  font-weight: var(--font-weight-label-2-medium);
+  letter-spacing: var(--letter-spacing-label-2-medium);
+}
+.text-label-3-medium {
+   font-family: var(--font-primary);
+   font-size: var(--font-size-label-3-medium);
+   line-height: var(--line-height-label-3-medium);
+   font-weight: var(--font-weight-label-3-medium);
+   font-style: var(--font-style-label-3-medium);
+   letter-spacing: var(--letter-spacing-label-3-medium);
+ }

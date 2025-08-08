@@ -1,5 +1,13 @@
 import type { Metadata } from 'next';
 import '../styles/globals.css'; 
+import { Parkinsans } from 'next/font/google';
+
+const parkinsans = Parkinsans({
+  subsets: ['latin'],
+  variable: '--font-primary', // This makes the font available as a CSS variable
+  display: 'swap',
+  weight: ['300', '400', '500', '600', '700', '800']
+});
 
 export const metadata : Metadata = {
   title: 'Buzzbip',
@@ -12,7 +20,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
+    <html lang="en" className={parkinsans.variable}>
       <body>{children}</body>
     </html>
   )
