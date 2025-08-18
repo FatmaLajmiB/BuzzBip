@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import '../styles/globals.css'; 
 import { Parkinsans } from 'next/font/google';
 
+
 const parkinsans = Parkinsans({
   subsets: ['latin'],
   variable: '--font-primary', // This makes the font available as a CSS variable

@@ -1,0 +1,53 @@
+/* In heroSectionStyle.css */
+@keyframes float1 {
+  0% { 
+    transform: translate(-50%, 0) rotate(0deg); 
+  }
+  50% { 
+    transform: translate(-50%, -15px) rotate(3deg); 
+  }
+  100% { 
+    transform: translate(-50%, 0) rotate(0deg); 
+  }
+}
+
+@keyframes float2 {
+  0% { 
+    transform: translate(-50%, 0) rotate(0deg); 
+  }
+  50% { 
+    transform: translate(-50%, 15px) rotate(-3deg); 
+  }
+  100% { 
+    transform: translate(-50%, 0) rotate(0deg); 
+  }
+}
+
+.gradient-rect-animation {
+  position: absolute !important;
+  left: 30% !important;
+  animation-name: float1 !important;
+  animation-duration: 8s !important;
+  animation-timing-function: ease-in-out !important;
+  animation-iteration-count: infinite !important;
+  opacity: 0.7 !important;
+  z-index: 10 !important;
+  transform-origin: center !important;
+  transform-box: fill-box !important;
+  will-change: transform;
+}
+
+.gradient-circle-animation {
+  position: absolute !important;
+  top: -90% !important;
+  left: 30% !important;
+  animation-name: float2 !important;
+  animation-duration: 12s !important;
+  animation-timing-function: ease-in-out !important;
+  animation-iteration-count: infinite !important;
+  opacity: 0.7 !important;
+  z-index: 5 !important;
+  transform-origin: center !important;
+  transform-box: fill-box !important;
+  will-change: transform;
+}

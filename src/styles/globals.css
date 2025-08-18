@@ -12,11 +12,6 @@
 /* All your design tokens are now defined as CSS variables in the :root selector. */
 
 :root {
-  --font-size-label-3-medium: 18px;
-  --line-height-label-3-medium: 24px;
-  --font-weight-label-3-medium: 500;
-  --font-style-label-3-medium: Medium;
-  --letter-spacing-label-3-medium: 0.75%;
 
   /* Fonts */
   --font-primary: "\"Parkinsans\", sans-serif";
@@ -683,3 +678,37 @@ body {
    font-style: var(--font-style-label-3-medium);
    letter-spacing: var(--letter-spacing-label-3-medium);
  }
+/* In styles/globals.css */
+@keyframes float1 {
+  0% { 
+    transform: translate(-50%, 0) rotate(0deg); 
+  }
+  50% { 
+    transform: translate(-50%, -15px) rotate(3deg); 
+  }
+  100% { 
+    transform: translate(-50%, 0) rotate(0deg); 
+  }
+}
+
+@keyframes float2 {
+  0% { 
+    transform: translate(-50%, 0) rotate(0deg); 
+  }
+  50% { 
+    transform: translate(-50%, 15px) rotate(-3deg); 
+  }
+  100% { 
+    transform: translate(-50%, 0) rotate(0deg); 
+  }
+}
+
+.gradient-rect-animation {
+  animation: float1 8s ease-in-out infinite !important;
+  transform: translate(-50%, 0) !important;
+}
+
+.gradient-circle-animation {
+  animation: float2 12s ease-in-out infinite !important;
+  transform: translate(-50%, 0) !important;
+}
