@@ -1,0 +1,75 @@
+/* partnerssectionstyle.css */
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.logos-container {
+  width: 1440px !important;
+  margin: 0 auto;
+  overflow: hidden;
+  padding: 30px 0;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+}
+
+.logos-container:hover .logos-slide {
+  animation-play-state: paused;
+}
+
+.logos-container:before,
+.logos-container:after {
+  content: '';
+  position: absolute;
+  top: 27px;
+  width: 175px;
+  height: 46px;
+  z-index: 10;
+}
+
+.logos-container:before {
+  left: 0;
+  background: linear-gradient(to left, rgba(255,255,255,0), #051139);
+}
+
+.logos-container:after {
+  right: 0;
+  background: linear-gradient(to right, rgba(255,255,255,0),#051139);
+}
+
+.logos-track {
+  display: inline-block;
+  white-space: nowrap;
+}
+
+.logos-slide {
+  display: inline-block;
+  white-space: nowrap;
+  animation: 35s slide infinite linear;
+}
+
+.logo-item {
+  display: inline-block;
+  width: 170px;
+  height: 41px;
+  margin-right: 96px;
+  opacity: 1;
+  transform: rotate(0deg);
+  vertical-align: middle;
+}
+
+.logo-item:last-child {
+  margin-right: 0;
+}
+
+.logo-item svg {
+  width: 170px;
+  height: 41px;
+  display: block;
+}
