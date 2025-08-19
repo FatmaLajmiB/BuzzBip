@@ -1,5 +1,6 @@
 import React from "react";
 import HeroSection from "@/components/sections/hero-section/HeroSection";
+import KeyBenefitsSection from "@/components/sections/key-benefits-section/KeyBenefitsSection";
 import Header from "../components/Header";
 import PartnersLogos from "@/components/sections/hero-section/PartnersLogos";
 const TEXTURE_IMAGE_URL = "/images/Texture.png";
@@ -22,7 +23,11 @@ export default function Home() {
       <div className="container mx-auto px-4 py-8 flex flex-col gap-10 pr-24 pl-24 relative z-20">
         <HeroSection />
       </div>
-      
+
+      <div className="container mx-auto px-4 py-8 flex flex-col gap-10 pr-24 pl-24 relative z-20">
+        <KeyBenefitsSection />
+      </div>
+
     </div>
   );
 }
