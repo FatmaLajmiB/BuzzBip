@@ -4,6 +4,7 @@ import KeyBenefitsSection from "@/components/sections/key-benefits-section/KeyBe
 import FeaturesSection from "@/components/sections/features-section/FeaturesSection";
 import Header from "../components/Header";
 import PartnersLogos from "@/components/sections/hero-section/PartnersLogos";
+import StepsSection from "@/components/sections/steps-section/StepsSection";
 const TEXTURE_IMAGE_URL = "/images/Texture.png";
 
 export default function Home() {
@@ -31,6 +32,9 @@ export default function Home() {
 
       <div className="container mx-auto px-4 py-8 flex flex-col gap-10 pr-24 pl-24 relative z-20">
         <FeaturesSection />
+      </div>
+      <div className="container mx-auto px-4 py-8 flex flex-col gap-10 pr-24 pl-24 relative z-20">
+        <StepsSection />
       </div>
     </div>
   );
