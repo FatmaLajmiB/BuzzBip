@@ -12,13 +12,13 @@ function TestimonialsSection() {
     {
       image: "/TestimonialsImages/Tarek.png",
       quote: <span>
-              “ Very good job BuzzBip team.
+              "Very good job BuzzBip team.
               <br />
               You have truly earned the trust we placed in you.
               <br />
               It is rewarding for us at Arkan as a startup ourselves, to witness the success
               <br />
-              of our partnership ”
+              of our partnership"
             </span>,
       author: "Tarek Marzouk",
       role: "Co-Founder, Arkan.tn"
@@ -84,7 +84,7 @@ function TestimonialsSection() {
   };
 
   return (
-    <div className="min-h-screen w-full py-20 px-4 md:px-8 lg:px-24 flex flex-col items-center relative overflow-hidden">
+    <div className="min-h-screen w-full w-[1440px] py-20 px-4 md:px-8 lg:px-24 flex flex-col justify-center items-center relative overflow-hidden">
       {/* "People say" Pill */}
       <div className="flex items-center justify-center mb-8">
         <div
@@ -92,12 +92,11 @@ function TestimonialsSection() {
             bg-white
             border border-[1px] border-primary-500
             rounded-full
-            px-2 py-2
+            px-4 py-2
             text-[14px] font-medium leading-[16px]
             text-primary-500
             flex items-center space-x-2
             font-medium
-            w-[123px] h-[24px]
           "
           style={{
             fontFamily: "Parkinsans",
@@ -139,7 +138,7 @@ function TestimonialsSection() {
       {/* Subtitle/Description */}
       <p
         className="
-          text-[16px] md:text-[18px] font-normal leading-[24px] md:leading-[28px] text-white text-center max-w-3xl w-[764px] h-[48px] tracking-[0.0075em] 
+          text-[16px] md:text-[18px] font-normal leading-[24px] md:leading-[28px] text-white text-center max-w-3xl mb-12 tracking-[0.0075em] 
         "
         style={{ fontFamily: "Parkinsans, sans-serif" }}
       >
@@ -180,7 +179,7 @@ function TestimonialsSection() {
         />
         
         {/* Indicator dots */}
-        <div className="flex ">
+        <div className="">
           {testimonials.map((_, index) => (
             <button
               key={index}

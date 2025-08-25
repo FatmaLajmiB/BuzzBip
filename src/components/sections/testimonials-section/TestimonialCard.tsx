@@ -28,7 +28,7 @@ const TestimonialCard: React.FC<TestimonialCardProps> = ({
   `;
 
   return (
-    <div className="relative w-full max-w-[1248px] bg-transparent flex flex-col items-center">
+    <div className="relative w-full max-w-[1440px] bg-transparent flex flex-col items-center">
       {/* Container for Fused SVG and Image */}
       <div className="relative w-[400px] h-[300px] md:w-[500px] md:h-[350px] flex items-center justify-center mb-2">
         {/* Fused SVG Background */}
@@ -50,8 +50,8 @@ const TestimonialCard: React.FC<TestimonialCardProps> = ({
       {/* Quote */}
       <div
         className="
-          relative text-[20px] md:text-[29px] lg:text-[29px] font-semibold leading-[28px] md:leading-[32px] lg:leading-[40px] text-white text-center 
-          mb-8 w-full max-w-[1248px] z-20 tracking-[0.0075em]
+          relative text-[20px] md:text-[32px] lg:text-[32px] font-semibold leading-[28px] md:leading-[32px] lg:leading-[40px] text-white text-center 
+          mb-8 w-full w-[1248px] z-20 tracking-[0.0075em]
         "
         style={{ fontFamily: "Parkinsans" }}
       >
