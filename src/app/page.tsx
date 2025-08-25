@@ -5,6 +5,7 @@ import FeaturesSection from "@/components/sections/features-section/FeaturesSect
 import Header from "../components/Header";
 import PartnersLogos from "@/components/sections/hero-section/PartnersLogos";
 import StepsSection from "@/components/sections/steps-section/StepsSection";
+import TestimonialsSection from "@/components/sections/testimonials-section/TestimonialsSection";
 const TEXTURE_IMAGE_URL = "/images/Texture.png";
 
 export default function Home() {
@@ -36,6 +37,10 @@ export default function Home() {
       <div className="container mx-auto px-4 py-8 flex flex-col gap-10 pr-24 pl-24 relative z-20">
         <StepsSection />
       </div>
+      <div className="container mx-auto px-4 py-8 flex flex-col gap-10 pr-24 pl-24 relative z-20">
+        <TestimonialsSection />
+      </div>
+
     </div>
   );
 }
