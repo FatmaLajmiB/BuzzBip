@@ -45,7 +45,7 @@ function FAQItem({ question, answer, isOpen, onClick }: FAQItemProps) {
         <h3
           className="
             text-[18px] font-medium leading-[24px] text-white
-            max-w-[85%]
+            max-w-[467px]
           "
         >
           {question}

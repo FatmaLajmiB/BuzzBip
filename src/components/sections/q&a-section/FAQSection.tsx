@@ -38,7 +38,7 @@ function FAQSection() {
       answer: "BuzzBip provides comprehensive analytics and reporting tools to track the performance of your campaigns, including conversion rates, revenue generated, and customer engagement.",
     },
     {
-      question: "What is WhatsApp Business Platform / API (WABA)?",
+      question: "What is WhatsApp Business Platform/API (WABA)?",
       answer: "WhatsApp Business Platform (WABA) is a secure, scalable solution for medium and large businesses to communicate with customers on WhatsApp, enabling features like automated messaging, quick replies, and CRM integration.",
     },
   ];
@@ -51,7 +51,7 @@ function FAQSection() {
   return (
     <div
       className="
-        min-h-[700px] /* Minimum height for the section */
+        min-h-[600px] /* Minimum height for the section */
         w-full w-[1440px]/* Take full width */
         px-4 md:px-8 lg:px-24 /* Responsive padding */
         flex flex-col lg:flex-row items-start /* Arrange content in a row on large screens */
