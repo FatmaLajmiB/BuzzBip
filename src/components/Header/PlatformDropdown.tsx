@@ -93,15 +93,33 @@ const PlatformDropdown = () => {
   ];
 
   return (
-    <div className="absolute top-full w-full left-0 right-0 mx-auto mt-4 pt-3 pr-8 pb-3 pl-8 bg-[#29314b]/98 rounded-[24px] backdrop-blur-[400px] border border-white/15 z-50 w-[1248px] grid grid-cols-2 gap-x-[40px]">
-      <div>
-        <div className="flex justify-between items-center mb-6">
-          <h2 className="text-white text-lg font-bold">Features</h2>
-          <a href="#" className="text-white text-sm font-semibold hover:underline">
-            View All Features &rarr;
+    <div 
+      className="
+        absolute top-full left-0 right-0 mx-auto mt-2 sm:mt-3 lg:mt-4
+        pt-2 sm:pt-3 pr-4 sm:pr-6 lg:pr-8 pb-2 sm:pb-3 pl-4 sm:pl-6 lg:pl-8
+        bg-[#29314b]/98 rounded-[16px] sm:rounded-[20px] lg:rounded-[24px] 
+        backdrop-blur-[400px] border border-white/15 z-50 
+        w-[calc(100vw-2rem)] sm:w-[calc(100vw-4rem)] md:w-full lg:max-w-[1248px]
+        grid grid-cols-1 lg:grid-cols-2 
+        gap-x-4 sm:gap-x-6 lg:gap-x-[40px] 
+        gap-y-4 sm:gap-y-6 lg:gap-y-8 
+        p-3 sm:p-4 md:p-6 lg:p-8 xl:p-10
+        max-h-[80vh] overflow-y-auto
+      "
+    >
+      <div className="w-full">
+        <div className="flex justify-between items-center mb-4 sm:mb-5 lg:mb-6">
+          <h2 className="text-white text-base sm:text-lg font-bold">Features</h2>
+          <a 
+            href="#" 
+            className="text-white text-xs sm:text-sm font-semibold hover:underline whitespace-nowrap transition-colors duration-200"
+          >
+            <span className="hidden sm:inline">View All Features</span>
+            <span className="sm:hidden">All Features</span>
+            <span className="ml-1">&rarr;</span>
           </a>
         </div>
-        <div className="grid grid-cols-2 gap-4"> 
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-2 sm:gap-3 lg:gap-4"> 
           {features.map((feature, index) => (
             <FeatureCard
               key={index}
@@ -113,9 +131,10 @@ const PlatformDropdown = () => {
           ))}
         </div>
       </div>
-      <div>
-        <h2 className="text-white text-lg font-bold mb-6">Solutions</h2>
-        <div className="grid grid-cols-1 gap-4"> 
+      
+      <div className="w-full">
+        <h2 className="text-white text-base sm:text-lg font-bold mb-4 sm:mb-5 lg:mb-6">Solutions</h2>
+        <div className="grid grid-cols-1 gap-2 sm:gap-3 lg:gap-4"> 
           {solutions.map((solution, index) => (
             <FeatureCard
               key={index}
@@ -124,7 +143,7 @@ const PlatformDropdown = () => {
               description={solution.description}
               bgColor={solution.bgColor}
               textColor={solution.textColor}
-              width="w-[493px]"
+              width="w-full" 
             />
           ))}
         </div>
