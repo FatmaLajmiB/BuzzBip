@@ -34,14 +34,14 @@ const ProgressBar = ({
   }, [value]);
 
   return (
-    <div className="flex items-center gap-2 mb-1">
+    <div className="flex items-center gap-1 sm:gap-2 md:mb-1 sm:mb-0">
       <div>{icon}</div>
       <div className="flex-1">
         <div className="flex justify-between text-[10px] mb-0.5">
-          <span className="text-[#43444C] text-[9px]">{leftText}</span>
-          <span className="text-[#43444C] text-[9px]">{rightText}</span>
+          <span className="text-[#43444C] text-[8px] sm:text-[9px]">{leftText}</span>
+          <span className="text-[#43444C] text-[8px] sm:text-[9px]">{rightText}</span>
         </div>
-        <div className="h-1.5 bg-gray-100 rounded-full overflow-hidden">
+        <div className=" h-1 sm:h-0.5 md:h-1.5 bg-gray-100 rounded-full overflow-hidden">
           <div
             ref={progressRef}
             className="h-full rounded-full transition-all duration-700 ease-out"
@@ -67,7 +67,7 @@ const HeroImage = () => {
 
 
   return (
-    <div className="relative w-full h-[554px] mt-16 flex justify-center items-center">
+    <div className="relative w-full min-h-[400px] md:min-h-[500px] lg:h-[554px] mt-8 md:mt-16 flex justify-center items-center ">
       {/* Background Gradient */}
       <div className="gradient-rect-animation">
       <svg
@@ -181,19 +181,14 @@ const HeroImage = () => {
       </div>
 
       {/* right image  */}
+      <div >
       <svg
-        width="110.9473648071289"
-        height="200.93130493164062"
         viewBox="0 0 152 262"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
-        style={{
-          position: "absolute",
-          top: "142px",
-          right: "0px",
-          opacity: 1,
-          zIndex: 30,
-        }}
+        className="absolute w-[70px] h-[120px] top-[90px] right-0  z-30
+                   sm:w-[90px] sm:h-[155px] sm:top-[110px] sm:right-[5%]
+                   md:w-[111px] md:h-[192px] md:top-[142px] md:right-0"
       >
         <g filter="url(#filter0_d_1729_13670)">
           <path
@@ -414,14 +409,16 @@ const HeroImage = () => {
           </clipPath>
         </defs>
       </svg>
-
+</div>
       <img
         src="/HeroImages/mobile.png"
         alt="Mobile Phone Mockup"
-        className="absolute z-10 w-[368.6167907714844px] h-[512px] object-contain"
+        className="absolute z-10 object-contain
+             w-[240px] h-[343px] left-1/2 top-[180px]
+             xs:w-[260px] xs:h-[371px] xs:top-[190px]
+             sm:w-[280px] sm:h-[400px] sm:left-1/2 sm:top-[279px]
+             md:w-[368px] md:h-[512px] md:left-[383px] md:top-[279px]"
         style={{
-          left: "383px",
-          top: "279px",
           transform: "translateY(-50%) translateX(-50%)",
         }}
         onError={(e) => {
@@ -433,11 +430,13 @@ const HeroImage = () => {
 
       {/* ROI Report Card with Progress Bars */}
       <div
-        className="absolute z-20 w-[220px] h-[165px] rounded-[24px] shadow-xl bg-white p-4"
-        style={{ top: "10%", left: "calc(50% - 330px)" }}
+        className="absolute z-20 w-[140px] h-[160px] rounded-[24px] shadow-xl bg-white p-2
+                   top-[5%] right-[180px]
+                   sm:w-[140px] sm:h-[100px] sm:top-[10%] sm:left-0 
+                   md:w-[220px] md:h-[165px] md:left-[calc(50%-330px)] md:p-4"
       >
-        <div className="flex justify-between items-center mb-1">
-          <h3 className="font-bold text-[#43444C] text-sm">ROI Report</h3>
+        <div className="flex justify-between items-center mb-1 sm:mb-0.5">
+          <h3 className="font-bold text-[#43444C] text-[10px] md:text-sm ">ROI Report</h3>
         </div>
 
         {/* Progress Bars Section */}
@@ -475,8 +474,8 @@ const HeroImage = () => {
       {/* clicked order cards */}
       {/* Metrics Cards */}
       <div
-        className="absolute z-20 w-[131px] h-[52px] rounded-full shadow-xl bg-white flex items-center"
-        style={{ top: "43%", left: "25%" }}
+        className="absolute z-20 w-[110px] h-[45px] rounded-full shadow-xl bg-white flex items-center top-[50%] right-[75%]
+                   md:w-[130px] md:h-[52px] md:top-[43%] md:left-[25%]"
       >
         <div className="flex items-center w-full">
           <div className="mr-1 ml-1">
@@ -503,7 +502,7 @@ const HeroImage = () => {
           </div>
           <div className="flex flex-col justify-center">
             <p className="text-xs text-[#051139]/70 mt-1">Clicked</p>
-            <p className="text-xl font-semibold text-[#051139]/80">
+            <p className=" text-xs md:text-xl font-semibold text-[#051139]/80">
               {clickedCount.toLocaleString()}
             </p>
           </div>
@@ -511,8 +510,8 @@ const HeroImage = () => {
       </div>
 
       <div
-        className="absolute z-20 w-[131px] h-[52px] rounded-full shadow-xl bg-white flex items-center"
-        style={{ top: "55%", left: "5%" }}
+        className="absolute z-20 w-[110px] h-[45px] rounded-full shadow-xl bg-white flex items-center top-[65%] right-[90%]
+                   md:w-[130px] md:h-[52px] md:top-[55%] md:left-[5%]"
       >
         <div className="flex items-center w-full">
           <div className="mr-1 ml-1 mt-1">
@@ -586,79 +585,79 @@ const HeroImage = () => {
           </div>
           <div className="flex flex-col justify-center">
             <p className="text-xs text-[#051139]/70 mt-1">Ordered</p>
-            <p className="text-xl font-semibold text-[#051139]/80">
+            <p className="text-xs md:text-xl font-semibold text-[#051139]/80">
               {orderedCount.toLocaleString()}
             </p>
           </div>
         </div>
       </div>
 
-      <div
-        className="absolute z-20 w-[183px] h-[134px] rounded-[24px] shadow-xl bg-white flex flex-col p-3"
-        style={{ top: "68%", left: "15%" }}
-      >
-        {/* Top section with icon and text */}
-        <div className="flex items-center mb-2">
-          <div className="mr-3">
-            <svg
-              width="42"
-              height="43"
-              viewBox="0 0 42 43"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <circle cx="21" cy="21" r="20" fill="#FF7F3C" />
-              <path
-                d="M18.5013 18.3334C20.3423 18.3334 21.8346 16.841 21.8346 15.0001C21.8346 13.1591 20.3423 11.6667 18.5013 11.6667C16.6604 11.6667 15.168 13.1591 15.168 15.0001C15.168 16.841 16.6604 18.3334 18.5013 18.3334Z"
-                fill="white"
-              />
-              <path
-                d="M18.5013 27.5009C21.723 27.5009 24.3346 26.0085 24.3346 24.1676C24.3346 22.3266 21.723 20.8342 18.5013 20.8342C15.2796 20.8342 12.668 22.3266 12.668 24.1676C12.668 26.0085 15.2796 27.5009 18.5013 27.5009Z"
-                fill="white"
-              />
-              <path
-                d="M28.5 24.167C28.5 25.5477 26.8037 26.6669 24.7326 26.6669C25.3428 26 25.7624 25.1628 25.7624 24.1681C25.7624 23.1722 25.3418 22.3343 24.7305 21.667C26.8016 21.667 28.5 22.7862 28.5 24.167Z"
-                fill="white"
-              />
-              <path
-                d="M25.9996 15.0005C25.9996 16.3812 24.8803 17.5005 23.4996 17.5005C23.1985 17.5005 22.9099 17.4473 22.6426 17.3497C23.0368 16.6563 23.262 15.8542 23.262 14.9996C23.262 14.1455 23.0372 13.344 22.6434 12.6509C22.9105 12.5536 23.1988 12.5005 23.4996 12.5005C24.8803 12.5005 25.9996 13.6198 25.9996 15.0005Z"
-                fill="white"
-              />
-            </svg>
-          </div>
-          <div className="flex flex-col">
-            <p className="text-xs text-[#051139]/70">Customers</p>
-             <p className="text-xl font-semibold text-[#051139]/80">
-              {customersCount.toLocaleString()}
-            </p>
-          </div>
-        </div>
 
-        {/* Chart section */}
-        <div className="flex-1 flex items-end">
-          {/* <div 
-            className="w-full transition-all duration-1000 ease-out"
-            style={{ height: `${chartHeight}px` }}
-          > */}
+    <div className="absolute z-20 w-[150px] h-[100px] rounded-[24px] shadow-xl bg-white flex flex-col p-3 top-[68%] left-[70%]
+                   md:w-[183px] md:h-[134px] sm:top-[68%] sm:left-[15%]">
+      
+      {/* Top section with icon and text */}
+      <div className="flex items-center mb-2">
+        <div className="mr-2 sm:mr-3">
           <svg
-            width="100%"
-            height="63"
+            className="w-[32px] h-[32px] sm:w-[42px] sm:h-[42px]"
+            viewBox="0 0 42 43"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <circle cx="21" cy="21" r="20" fill="#FF7F3C" />
+            <path
+              d="M18.5013 18.3334C20.3423 18.3334 21.8346 16.841 21.8346 15.0001C21.8346 13.1591 20.3423 11.6667 18.5013 11.6667C16.6604 11.6667 15.168 13.1591 15.168 15.0001C15.168 16.841 16.6604 18.3334 18.5013 18.3334Z"
+              fill="white"
+            />
+            <path
+              d="M18.5013 27.5009C21.723 27.5009 24.3346 26.0085 24.3346 24.1676C24.3346 22.3266 21.723 20.8342 18.5013 20.8342C15.2796 20.8342 12.668 22.3266 12.668 24.1676C12.668 26.0085 15.2796 27.5009 18.5013 27.5009Z"
+              fill="white"
+            />
+            <path
+              d="M28.5 24.167C28.5 25.5477 26.8037 26.6669 24.7326 26.6669C25.3428 26 25.7624 25.1628 25.7624 24.1681C25.7624 23.1722 25.3418 22.3343 24.7305 21.667C26.8016 21.667 28.5 22.7862 28.5 24.167Z"
+              fill="white"
+            />
+            <path
+              d="M25.9996 15.0005C25.9996 16.3812 24.8803 17.5005 23.4996 17.5005C23.1985 17.5005 22.9099 17.4473 22.6426 17.3497C23.0368 16.6563 23.262 15.8542 23.262 14.9996C23.262 14.1455 23.0372 13.344 22.6434 12.6509C22.9105 12.5536 23.1988 12.5005 23.4996 12.5005C24.8803 12.5005 25.9996 13.6198 25.9996 15.0005Z"
+              fill="white"
+            />
+          </svg>
+        </div>
+        <div className="flex flex-col min-w-0 flex-1">
+          <p className="text-[10px] sm:text-xs text-[#051139]/70">Customers</p>
+          <p className="text-xs sm:text-sm md:text-base lg:text-lg font-semibold text-[#051139]/80 truncate">
+            {customersCount.toLocaleString()}
+          </p>
+        </div>
+      </div>
+
+      {/* Responsive Chart section */}
+      <div className="flex-1 flex items-end min-h-0">
+        <div className="w-full h-full relative">
+          <svg
+            className="w-full h-full"
             viewBox="0 0 161 63"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
-            preserveAspectRatio="none"
+            preserveAspectRatio="xMidYEnd meet"
           >
+            {/* Gradient fill area */}
             <path
               d="M155.457 12.6197C157.729 12.6197 157.729 8.20312 160 8.20312V63H1V36.4378C3.46072 36.4378 3.27144 38.0625 5.54286 38.0625C7.81429 38.0625 7.8143 33.4487 10.0857 33.4487C12.3571 33.4487 11.9786 34.8684 14.6286 34.8684C17.2786 34.8684 16.5214 37.5262 19.1714 37.5262C21.8214 37.5262 21.2536 36.5167 23.7143 36.5167C26.175 36.5167 25.7018 31.7058 28.2571 31.7058C30.8125 31.7058 30.15 33.2752 32.8 33.2752C35.45 33.2752 34.9768 35.4362 37.3429 35.4362C39.7089 35.4362 39.3304 28.2592 41.8857 28.2592C44.4411 28.2592 44.1571 30.7436 46.4286 30.7436C48.7 30.7436 48.3214 27.2655 50.9714 27.2655C53.6214 27.2655 53.0536 29.4896 55.5143 29.4896C57.975 29.4896 57.5964 20.3961 60.0571 20.3961C62.5179 20.3961 62.0446 22.9278 64.6 22.9278C67.1554 22.9278 66.4929 24.5998 69.1429 24.5998C71.7929 24.5998 71.1304 20.262 73.6857 20.262C76.2411 20.262 75.5786 22.3915 78.2286 22.3915C80.8786 22.3915 80.4054 18.8818 82.7714 18.8818C85.1375 18.8818 84.8536 13.0141 87.3143 13.0141C89.775 13.0141 89.3964 22.8331 91.8571 22.8331C94.3179 22.8331 94.0339 15.9558 96.4 15.9558C98.7661 15.9558 98.2929 18.9686 100.943 18.9686C103.593 18.9686 103.025 21.6738 105.486 21.6738C107.946 21.6738 107.662 17.1941 110.029 17.1941C112.395 17.1941 112.205 21.4529 114.571 21.4529C116.938 21.4529 116.654 19.5601 119.114 19.5601C121.575 19.5601 121.196 15.6561 123.657 15.6561C126.118 15.6561 125.739 17.2177 128.2 17.2177C130.661 17.2177 130.471 11.5156 132.743 11.5156C135.014 11.5156 134.636 19.3314 137.286 19.3314C139.936 19.3314 139.273 14.0236 141.829 14.0236C144.384 14.0236 144.005 16.2082 146.371 16.2082C148.738 16.2082 148.548 10.7663 150.914 10.7663C153.28 10.7663 153.186 12.6197 155.457 12.6197Z"
               fill="url(#paint0_linear_1698_135157)"
             />
+            
+            {/* Chart line */}
             <path
               d="M160 8.20312C157.729 8.20312 157.729 12.6197 155.457 12.6197C153.186 12.6197 153.28 10.7663 150.914 10.7663C148.548 10.7663 148.738 16.2082 146.371 16.2082C144.005 16.2082 144.384 14.0236 141.829 14.0236C139.273 14.0236 139.936 19.3314 137.286 19.3314C134.636 19.3314 135.014 11.5156 132.743 11.5156C130.471 11.5156 130.661 17.2177 128.2 17.2177C125.739 17.2177 126.118 15.6561 123.657 15.6561C121.196 15.6561 121.575 19.5601 119.114 19.5601C116.654 19.5601 116.938 21.4529 114.571 21.4529C112.205 21.4529 112.395 17.1941 110.029 17.1941C107.663 17.1941 107.946 21.6738 105.486 21.6738C103.025 21.6738 103.593 18.9686 100.943 18.9686C98.2929 18.9686 98.7661 15.9558 96.4 15.9558C94.0339 15.9558 94.3179 22.8331 91.8571 22.8331C89.3964 22.8331 89.775 13.0141 87.3143 13.0141C84.8536 13.0141 85.1375 18.8818 82.7714 18.8818C80.4054 18.8818 80.8786 22.3915 78.2286 22.3915C75.5786 22.3915 76.2411 20.262 73.6857 20.262C71.1304 20.262 71.7929 24.5998 69.1429 24.5998C66.4929 24.5998 67.1554 22.9278 64.6 22.9278C62.0446 22.9278 62.5179 20.3961 60.0571 20.3961C57.5964 20.3961 57.975 29.4896 55.5143 29.4896C53.0536 29.4896 53.6214 27.2655 50.9714 27.2655C48.3214 27.2655 48.7 30.7436 46.4286 30.7436C44.1571 30.7436 44.4411 28.2592 41.8857 28.2592C39.3304 28.2592 39.7089 35.4362 37.3429 35.4362C34.9768 35.4362 35.45 33.2752 32.8 33.2752C30.15 33.2752 30.8125 31.7058 28.2571 31.7058C25.7018 31.7058 26.175 36.5167 23.7143 36.5167C21.2536 36.5167 21.8214 37.5262 19.1714 37.5262C16.5214 37.5262 17.2786 34.8684 14.6286 34.8684C11.9786 34.8684 12.3572 33.4487 10.0857 33.4487C7.81429 33.4487 7.81429 38.0625 5.54286 38.0625C3.27144 38.0625 3.46072 36.4378 1 36.4378"
               stroke="#FF7F3C"
-              strokeWidth="2"
+              strokeWidth="1.5"
               strokeLinecap="round"
               strokeLinejoin="round"
+              className="sm:stroke-2"
             />
+            
             <defs>
               <linearGradient
                 id="paint0_linear_1698_135157"
@@ -674,12 +673,14 @@ const HeroImage = () => {
             </defs>
           </svg>
         </div>
-      {/* </div> */}
       </div>
+    </div>
 
       <div
-        className="absolute z-20 w-[176px] h-[52px] rounded-full shadow-xl bg-white flex items-center"
-        style={{ top: "8%", left: "76%" }}
+        className="absolute z-20 w-[135px] h-[40px] rounded-full shadow-xl bg-white flex items-center
+                   top-[8%] left-[76%]
+                   sm:w-[150px] sm:h-[45px] sm:top-[8%] sm:left-[76%]
+                   md:w-[176px] md:h-[52px] md:top-[8%] md:left-[76%]"
       >
         <div className="flex items-center w-full justify-between">
           {/* Left section with icon and text */}
@@ -705,7 +706,7 @@ const HeroImage = () => {
             </div>
             <div className="flex flex-col">
               <p className="text-xs text-[#051139]/70">Revenue</p>
-              <p className="text-xl font-semibold text-[#051139]/80">
+              <p className="text-xs md:text-xl font-semibold text-[#051139]/80">
                 {revenueCount.toLocaleString()} $
               </p>
             </div>

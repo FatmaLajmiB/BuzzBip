@@ -50,3 +50,4 @@ function MiddleFeaturesHeader({ title, description, titleColorClass = 'text-base
 }
 
 export default MiddleFeaturesHeader
+
